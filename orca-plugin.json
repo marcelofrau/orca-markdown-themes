@@ -1,0 +1,169 @@
+{
+  "manifestVersion": 2,
+  "id": "orca-markdown-themes",
+  "name": "Markdown Themes",
+  "version": "0.3.0",
+  "description": "Read-only Markdown preview in Tinta's ten themes, with 250+ code block themes (Ayu, GitHub, Monokai, all of base16) and Mermaid diagrams in their own theme, zoomable and expandable.",
+  "engines": {
+    "orca": ">=1.4.248"
+  },
+  "execution": "sandboxed-ui",
+  "pluginApi": 1,
+  "capabilities": [
+    {
+      "kind": "settings:own"
+    }
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "markdown-themes",
+        "title": "Markdown Themes",
+        "extensions": [
+          ".md",
+          ".markdown"
+        ],
+        "entry": "editor/main.ts",
+        "priority": "option",
+        "frame": "isolated"
+      }
+    ],
+    "settings": [
+      {
+        "key": "theme",
+        "title": "Page theme",
+        "description": "Tinta's built-in themes. Also in the viewer's gear menu.",
+        "type": "string",
+        "default": "paper",
+        "enum": [
+          "paper",
+          "arctic",
+          "dusk",
+          "meadow",
+          "sakura",
+          "midnight",
+          "dracula",
+          "ember",
+          "forest",
+          "abyss"
+        ],
+        "enumLabels": [
+          "Paper (warm sepia)",
+          "Arctic (cool blue)",
+          "Dusk (warm amber)",
+          "Meadow (fresh green)",
+          "Sakura (soft pink)",
+          "Midnight (deep navy, dark)",
+          "Dracula (dark)",
+          "Ember (warm dark)",
+          "Forest (deep green, dark)",
+          "Abyss (pure black, dark)"
+        ]
+      },
+      {
+        "key": "codeTheme",
+        "title": "Code blocks",
+        "description": "Colours for fenced code blocks.",
+        "type": "string",
+        "default": "ayu-dark",
+        "enum": [
+          "ayu-dark",
+          "page",
+          "github",
+          "github-dark",
+          "github-dark-dimmed",
+          "atom-one-dark",
+          "atom-one-light",
+          "monokai",
+          "monokai-sublime",
+          "nord",
+          "night-owl",
+          "tokyo-night-dark",
+          "tokyo-night-light",
+          "vs2015",
+          "vs",
+          "xcode",
+          "intellij-light",
+          "androidstudio",
+          "stackoverflow-dark",
+          "stackoverflow-light",
+          "rose-pine",
+          "rose-pine-moon",
+          "rose-pine-dawn",
+          "panda-syntax-dark",
+          "shades-of-purple",
+          "base16/dracula",
+          "base16/gruvbox-dark-medium",
+          "base16/gruvbox-light-medium",
+          "base16/solarized-dark",
+          "base16/solarized-light",
+          "base16/material",
+          "base16/one-light"
+        ],
+        "enumLabels": [
+          "Ayu Dark",
+          "Same as the page theme",
+          "GitHub",
+          "GitHub Dark",
+          "GitHub Dark Dimmed",
+          "Atom One Dark",
+          "Atom One Light",
+          "Monokai",
+          "Monokai Sublime",
+          "Nord",
+          "Night Owl",
+          "Tokyo-night-Dark",
+          "Tokyo-night-light",
+          "Vs2015",
+          "Vs",
+          "Xcode",
+          "Intellij Light",
+          "Androidstudio",
+          "StackOverflow Dark",
+          "StackOverflow Light",
+          "Rose Pine",
+          "Rose Pine",
+          "Rose Pine",
+          "Panda Syntax Dark",
+          "Shades Of Purple",
+          "Dracula (base16)",
+          "Gruvbox dark, medium (base16)",
+          "Gruvbox light, medium (base16)",
+          "Solarized Dark (base16)",
+          "Solarized Light (base16)",
+          "Material (base16)",
+          "One Light (base16)"
+        ]
+      },
+      {
+        "key": "codeThemeCustom",
+        "title": "Code blocks: any other theme",
+        "description": "Any highlight.js or base16 theme id, such as kimbie-dark or base16/ocean (the viewer's gear menu lists them all). Overrides Code blocks when set; leave empty to use Code blocks.",
+        "type": "string",
+        "default": "",
+        "maxLength": 64
+      },
+      {
+        "key": "diagramTheme",
+        "title": "Diagrams",
+        "description": "Mermaid theme for diagrams, each on its own sheet.",
+        "type": "string",
+        "default": "default",
+        "enum": [
+          "default",
+          "neutral",
+          "forest",
+          "dark",
+          "page"
+        ],
+        "enumLabels": [
+          "Mermaid Default (light)",
+          "Mermaid Neutral (light, grey)",
+          "Mermaid Forest (light, green)",
+          "Mermaid Dark",
+          "Same as the page theme"
+        ]
+      }
+    ]
+  }
+}
