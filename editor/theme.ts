@@ -1,4 +1,4 @@
-// Layout only: colours, faces and type sizes come from the chosen Tinta theme (tinta-themes.ts),
+// Layout only: colours, faces and type sizes come from the chosen page theme (page-themes.ts),
 // which every rule here reads through its variables. Tinta draws body size and column width itself,
 // so those are ours.
 export const baseCss = `

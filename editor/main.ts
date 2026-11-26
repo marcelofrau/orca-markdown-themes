@@ -7,7 +7,7 @@ import dockerfile from '../vendor/highlight/languages/dockerfile.min.js'
 import { start } from './sync'
 import { cleanHtml, stripFrontmatter, tokenClasses } from './render'
 import { ayuCss, baseCss, hljsLayoutCss } from './theme'
-import { tintaThemes } from './tinta-themes'
+import { pageThemes } from './page-themes'
 import { codeThemes } from './code-themes'
 import { codeThemeWrites, resolveSettings, type Settings } from './settings'
 import { mountMenu } from './menu'
@@ -29,7 +29,8 @@ const SHEETS: Record<Settings['diagramTheme'], string> = {
   dark: '#333333', // Mermaid's dark background
   page: 'var(--page)'
 }
-let settings: Settings = resolveSettings({}, codeThemeIds)
+const pageThemeIds = new Set(pageThemes.map((t) => t.id))
+let settings: Settings = resolveSettings({}, codeThemeIds, pageThemeIds)
 
 const base = document.createElement('style')
 base.textContent = baseCss
@@ -41,8 +42,8 @@ document.body.append(root)
 
 async function applySettings() {
   const raw = await orca.settings.get().catch(() => ({}) as Record<string, unknown>)
-  settings = resolveSettings(raw as Record<string, unknown>, codeThemeIds)
-  const theme = tintaThemes.find((t) => t.id === settings.theme)!
+  settings = resolveSettings(raw as Record<string, unknown>, codeThemeIds, pageThemeIds)
+  const theme = pageThemes.find((t) => t.id === settings.theme)!
   page.textContent = theme.css
   const hljsTheme = codeThemes.find((t) => t.id === settings.codeTheme)
   code.textContent = settings.codeTheme === 'page' ? '' : hljsLayoutCss + (hljsTheme ? hljsTheme.css : ayuCss)
@@ -105,7 +106,7 @@ const menu = mountMenu([
   {
     key: 'theme',
     label: 'Page',
-    options: tintaThemes.map((t) => ({ value: t.id, label: t.name, group: t.dark ? 'Dark' : 'Light' })),
+    options: pageThemes.map((t) => ({ value: t.id, label: t.name, group: `${t.group}, ${t.dark ? 'dark' : 'light'}` })),
     value: () => settings.theme,
     onChange: (value) => save([['theme', value]])
   },

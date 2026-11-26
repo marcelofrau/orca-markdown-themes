@@ -1,0 +1,223 @@
+{
+  "_comment": "Classic page themes, in Tinta's variables. Colours from each theme's official palette. Fields: page, ink, inkStrong, inkSoft, link, line, lineFirm, surface, surfaceEdge, code, quote; tokens = [keyword, string, comment, number, function, className, control]; optional fonts {body, heading, code} and mark [background, colour].",
+  "themes": [
+    {
+      "id": "github-light", "name": "GitHub Light", "description": "github.com, light", "dark": false,
+      "page": "#ffffff", "ink": "#1f2328", "inkStrong": "#1f2328", "inkSoft": "#59636e", "link": "#0969da",
+      "line": "#d1d9e0", "lineFirm": "#c3ccd5", "surface": "#f6f8fa", "surfaceEdge": "#d1d9e0", "code": "#1f2328", "quote": "#d1d9e0",
+      "tokens": ["#cf222e", "#0a3069", "#59636e", "#0550ae", "#8250df", "#953800", "#cf222e"],
+      "fonts": {"body": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "heading": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "code": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace"},
+      "mark": ["#fff8c5", "#1f2328"]
+    },
+    {
+      "id": "github-dark", "name": "GitHub Dark", "description": "github.com, dark", "dark": true,
+      "page": "#0d1117", "ink": "#f0f6fc", "inkStrong": "#f0f6fc", "inkSoft": "#9198a1", "link": "#4493f8",
+      "line": "#3d444d", "lineFirm": "#656c76", "surface": "#151b23", "surfaceEdge": "#3d444d", "code": "#f0f6fc", "quote": "#3d444d",
+      "tokens": ["#ff7b72", "#a5d6ff", "#9198a1", "#79c0ff", "#d2a8ff", "#ffa657", "#ff7b72"],
+      "fonts": {"body": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "heading": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "code": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace"},
+      "mark": ["rgba(187, 128, 9, 0.4)", "#f0f6fc"]
+    },
+    {
+      "id": "github-dark-dimmed", "name": "GitHub Dark Dimmed", "description": "github.com, soft dark", "dark": true,
+      "page": "#22272e", "ink": "#adbac7", "inkStrong": "#cdd9e5", "inkSoft": "#768390", "link": "#539bf5",
+      "line": "#444c56", "lineFirm": "#545d68", "surface": "#2d333b", "surfaceEdge": "#444c56", "code": "#adbac7", "quote": "#444c56",
+      "tokens": ["#f47067", "#96d0ff", "#768390", "#6cb6ff", "#dcbdfb", "#f69d50", "#f47067"],
+      "fonts": {"body": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "heading": "-apple-system, \"Segoe UI\", \"Noto Sans\", Helvetica, Arial, sans-serif", "code": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, monospace"},
+      "mark": ["rgba(174, 124, 20, 0.4)", "#cdd9e5"]
+    },
+    {
+      "id": "solarized-light", "name": "Solarized Light", "description": "Ethan Schoonover's classic, light", "dark": false,
+      "page": "#fdf6e3", "ink": "#657b83", "inkStrong": "#586e75", "inkSoft": "#839496", "link": "#268bd2",
+      "line": "#e8e1cc", "lineFirm": "#d3cbb7", "surface": "#eee8d5", "surfaceEdge": "#e0d9c3", "code": "#586e75", "quote": "#b58900",
+      "tokens": ["#859900", "#2aa198", "#93a1a1", "#d33682", "#268bd2", "#b58900", "#cb4b16"]
+    },
+    {
+      "id": "solarized-dark", "name": "Solarized Dark", "description": "Ethan Schoonover's classic, dark", "dark": true,
+      "page": "#002b36", "ink": "#93a1a1", "inkStrong": "#eee8d5", "inkSoft": "#839496", "link": "#268bd2",
+      "line": "#0c3d49", "lineFirm": "#2b5560", "surface": "#073642", "surfaceEdge": "#0f4552", "code": "#93a1a1", "quote": "#b58900",
+      "tokens": ["#859900", "#2aa198", "#657b83", "#d33682", "#268bd2", "#b58900", "#cb4b16"],
+      "mark": ["rgba(181, 137, 0, 0.3)", "#eee8d5"]
+    },
+    {
+      "id": "gruvbox-light", "name": "Gruvbox Light", "description": "retro groove, light", "dark": false,
+      "page": "#fbf1c7", "ink": "#3c3836", "inkStrong": "#282828", "inkSoft": "#7c6f64", "link": "#076678",
+      "line": "#ebdbb2", "lineFirm": "#d5c4a1", "surface": "#f2e5bc", "surfaceEdge": "#e5d5ad", "code": "#3c3836", "quote": "#bdae93",
+      "tokens": ["#9d0006", "#79740e", "#928374", "#8f3f71", "#076678", "#b57614", "#af3a03"]
+    },
+    {
+      "id": "gruvbox-dark", "name": "Gruvbox Dark", "description": "retro groove, dark", "dark": true,
+      "page": "#282828", "ink": "#ebdbb2", "inkStrong": "#fbf1c7", "inkSoft": "#a89984", "link": "#83a598",
+      "line": "#3c3836", "lineFirm": "#504945", "surface": "#32302f", "surfaceEdge": "#45403d", "code": "#ebdbb2", "quote": "#665c54",
+      "tokens": ["#fb4934", "#b8bb26", "#928374", "#d3869b", "#83a598", "#fabd2f", "#fe8019"],
+      "mark": ["rgba(250, 189, 47, 0.28)", "#fbf1c7"]
+    },
+    {
+      "id": "nord", "name": "Nord", "description": "arctic, north-bluish", "dark": true,
+      "page": "#2e3440", "ink": "#d8dee9", "inkStrong": "#eceff4", "inkSoft": "#a7b1c2", "link": "#88c0d0",
+      "line": "#3b4252", "lineFirm": "#4c566a", "surface": "#3b4252", "surfaceEdge": "#434c5e", "code": "#e5e9f0", "quote": "#5e81ac",
+      "tokens": ["#81a1c1", "#a3be8c", "#7b88a1", "#b48ead", "#88c0d0", "#8fbcbb", "#81a1c1"],
+      "mark": ["rgba(235, 203, 139, 0.3)", "#eceff4"]
+    },
+    {
+      "id": "nord-light", "name": "Nord Light", "description": "Nord's Snow Storm", "dark": false,
+      "page": "#eceff4", "ink": "#2e3440", "inkStrong": "#2e3440", "inkSoft": "#4c566a", "link": "#5e81ac",
+      "line": "#d8dee9", "lineFirm": "#c2cad8", "surface": "#e5e9f0", "surfaceEdge": "#d8dee9", "code": "#3b4252", "quote": "#81a1c1",
+      "tokens": ["#5e81ac", "#5a7f3e", "#7b88a1", "#8f5f8a", "#3b7a8c", "#4f8a87", "#bf616a"]
+    },
+    {
+      "id": "one-dark", "name": "One Dark", "description": "Atom's One Dark", "dark": true,
+      "page": "#282c34", "ink": "#abb2bf", "inkStrong": "#d7dae0", "inkSoft": "#7f848e", "link": "#61afef",
+      "line": "#3a3f4b", "lineFirm": "#4b5263", "surface": "#21252b", "surfaceEdge": "#3a3f4b", "code": "#abb2bf", "quote": "#4b5263",
+      "tokens": ["#c678dd", "#98c379", "#7f848e", "#d19a66", "#61afef", "#e5c07b", "#c678dd"],
+      "mark": ["rgba(229, 192, 123, 0.3)", "#d7dae0"]
+    },
+    {
+      "id": "one-light", "name": "One Light", "description": "Atom's One Light", "dark": false,
+      "page": "#fafafa", "ink": "#383a42", "inkStrong": "#232324", "inkSoft": "#696c77", "link": "#4078f2",
+      "line": "#e5e5e6", "lineFirm": "#d3d3d4", "surface": "#f0f0f1", "surfaceEdge": "#e0e0e1", "code": "#383a42", "quote": "#a0a1a7",
+      "tokens": ["#a626a4", "#50a14f", "#a0a1a7", "#986801", "#4078f2", "#c18401", "#a626a4"]
+    },
+    {
+      "id": "catppuccin-latte", "name": "Catppuccin Latte", "description": "soothing pastel, light", "dark": false,
+      "page": "#eff1f5", "ink": "#4c4f69", "inkStrong": "#4c4f69", "inkSoft": "#6c6f85", "link": "#1e66f5",
+      "line": "#ccd0da", "lineFirm": "#bcc0cc", "surface": "#e6e9ef", "surfaceEdge": "#dce0e8", "code": "#4c4f69", "quote": "#7287fd",
+      "tokens": ["#8839ef", "#40a02b", "#7c7f93", "#fe640b", "#1e66f5", "#df8e1d", "#d20f39"]
+    },
+    {
+      "id": "catppuccin-frappe", "name": "Catppuccin Frappé", "description": "soothing pastel, muted dark", "dark": true,
+      "page": "#303446", "ink": "#c6d0f5", "inkStrong": "#c6d0f5", "inkSoft": "#a5adce", "link": "#8caaee",
+      "line": "#414559", "lineFirm": "#51576d", "surface": "#292c3c", "surfaceEdge": "#414559", "code": "#c6d0f5", "quote": "#babbf1",
+      "tokens": ["#ca9ee6", "#a6d189", "#949cbb", "#ef9f76", "#8caaee", "#e5c890", "#e78284"],
+      "mark": ["rgba(229, 200, 144, 0.3)", "#c6d0f5"]
+    },
+    {
+      "id": "catppuccin-macchiato", "name": "Catppuccin Macchiato", "description": "soothing pastel, medium dark", "dark": true,
+      "page": "#24273a", "ink": "#cad3f5", "inkStrong": "#cad3f5", "inkSoft": "#a5adcb", "link": "#8aadf4",
+      "line": "#363a4f", "lineFirm": "#494d64", "surface": "#1e2030", "surfaceEdge": "#363a4f", "code": "#cad3f5", "quote": "#b7bdf8",
+      "tokens": ["#c6a0f6", "#a6da95", "#939ab7", "#f5a97f", "#8aadf4", "#eed49f", "#ed8796"],
+      "mark": ["rgba(238, 212, 159, 0.3)", "#cad3f5"]
+    },
+    {
+      "id": "catppuccin-mocha", "name": "Catppuccin Mocha", "description": "soothing pastel, darkest", "dark": true,
+      "page": "#1e1e2e", "ink": "#cdd6f4", "inkStrong": "#cdd6f4", "inkSoft": "#a6adc8", "link": "#89b4fa",
+      "line": "#313244", "lineFirm": "#45475a", "surface": "#181825", "surfaceEdge": "#313244", "code": "#cdd6f4", "quote": "#b4befe",
+      "tokens": ["#cba6f7", "#a6e3a1", "#9399b2", "#fab387", "#89b4fa", "#f9e2af", "#f38ba8"],
+      "mark": ["rgba(249, 226, 175, 0.3)", "#cdd6f4"]
+    },
+    {
+      "id": "rose-pine", "name": "Rosé Pine", "description": "all natural pine, faux fur and a bit of soho vibes", "dark": true,
+      "page": "#191724", "ink": "#e0def4", "inkStrong": "#e0def4", "inkSoft": "#908caa", "link": "#9ccfd8",
+      "line": "#26233a", "lineFirm": "#403d52", "surface": "#1f1d2e", "surfaceEdge": "#26233a", "code": "#e0def4", "quote": "#c4a7e7",
+      "tokens": ["#31748f", "#f6c177", "#6e6a86", "#ebbcba", "#ebbcba", "#9ccfd8", "#eb6f92"],
+      "mark": ["rgba(246, 193, 119, 0.28)", "#e0def4"]
+    },
+    {
+      "id": "rose-pine-moon", "name": "Rosé Pine Moon", "description": "Rosé Pine, moonlit", "dark": true,
+      "page": "#232136", "ink": "#e0def4", "inkStrong": "#e0def4", "inkSoft": "#908caa", "link": "#9ccfd8",
+      "line": "#393552", "lineFirm": "#44415a", "surface": "#2a273f", "surfaceEdge": "#393552", "code": "#e0def4", "quote": "#c4a7e7",
+      "tokens": ["#3e8fb0", "#f6c177", "#6e6a86", "#ea9a97", "#ea9a97", "#9ccfd8", "#eb6f92"],
+      "mark": ["rgba(246, 193, 119, 0.28)", "#e0def4"]
+    },
+    {
+      "id": "rose-pine-dawn", "name": "Rosé Pine Dawn", "description": "Rosé Pine, at dawn", "dark": false,
+      "page": "#faf4ed", "ink": "#575279", "inkStrong": "#575279", "inkSoft": "#797593", "link": "#286983",
+      "line": "#dfdad9", "lineFirm": "#cecacd", "surface": "#f2e9e1", "surfaceEdge": "#dfdad9", "code": "#575279", "quote": "#907aa9",
+      "tokens": ["#286983", "#ea9d34", "#9893a5", "#d7827e", "#d7827e", "#56949f", "#b4637a"]
+    },
+    {
+      "id": "tokyo-night", "name": "Tokyo Night", "description": "downtown Tokyo at night", "dark": true,
+      "page": "#1a1b26", "ink": "#a9b1d6", "inkStrong": "#c0caf5", "inkSoft": "#787c99", "link": "#7aa2f7",
+      "line": "#292e42", "lineFirm": "#414868", "surface": "#16161e", "surfaceEdge": "#292e42", "code": "#c0caf5", "quote": "#3d59a1",
+      "tokens": ["#bb9af7", "#9ece6a", "#565f89", "#ff9e64", "#7aa2f7", "#2ac3de", "#bb9af7"],
+      "mark": ["rgba(224, 175, 104, 0.3)", "#c0caf5"]
+    },
+    {
+      "id": "tokyo-night-storm", "name": "Tokyo Night Storm", "description": "Tokyo Night, stormy blue", "dark": true,
+      "page": "#24283b", "ink": "#a9b1d6", "inkStrong": "#c0caf5", "inkSoft": "#787c99", "link": "#7aa2f7",
+      "line": "#2f354f", "lineFirm": "#414868", "surface": "#1f2335", "surfaceEdge": "#2f354f", "code": "#c0caf5", "quote": "#3d59a1",
+      "tokens": ["#bb9af7", "#9ece6a", "#565f89", "#ff9e64", "#7aa2f7", "#2ac3de", "#bb9af7"],
+      "mark": ["rgba(224, 175, 104, 0.3)", "#c0caf5"]
+    },
+    {
+      "id": "tokyo-night-day", "name": "Tokyo Night Day", "description": "Tokyo Night, daylight", "dark": false,
+      "page": "#e1e2e7", "ink": "#3760bf", "inkStrong": "#343b58", "inkSoft": "#6172b0", "link": "#2e7de9",
+      "line": "#c4c8da", "lineFirm": "#a8aecb", "surface": "#d5d6db", "surfaceEdge": "#c4c8da", "code": "#3760bf", "quote": "#7890dd",
+      "tokens": ["#9854f1", "#587539", "#848cb5", "#b15c00", "#2e7de9", "#007197", "#f52a65"]
+    },
+    {
+      "id": "ayu-light", "name": "Ayu Light", "description": "simple, bright and elegant", "dark": false,
+      "page": "#fcfcfc", "ink": "#5c6166", "inkStrong": "#3f4448", "inkSoft": "#787b80", "link": "#399ee6",
+      "line": "#e7eaed", "lineFirm": "#d8dcdf", "surface": "#f3f4f5", "surfaceEdge": "#e7eaed", "code": "#5c6166", "quote": "#ffaa33",
+      "tokens": ["#fa8d3e", "#86b300", "#adaeb1", "#a37acc", "#f2ae49", "#399ee6", "#ed9366"]
+    },
+    {
+      "id": "ayu-mirage", "name": "Ayu Mirage", "description": "ayu, mirage", "dark": true,
+      "page": "#242936", "ink": "#cccac2", "inkStrong": "#e6e4dc", "inkSoft": "#8a9199", "link": "#73d0ff",
+      "line": "#2e3441", "lineFirm": "#3d4452", "surface": "#1f2430", "surfaceEdge": "#2e3441", "code": "#cccac2", "quote": "#ffcc66",
+      "tokens": ["#ffad66", "#d5ff80", "#6e7c8f", "#dfbfff", "#ffd173", "#73d0ff", "#f29e74"],
+      "mark": ["rgba(255, 204, 102, 0.25)", "#e6e4dc"]
+    },
+    {
+      "id": "ayu-dark", "name": "Ayu Dark", "description": "ayu, dark", "dark": true,
+      "page": "#10141c", "ink": "#bfbdb6", "inkStrong": "#e6e4dc", "inkSoft": "#767e8f", "link": "#59c2ff",
+      "line": "#1b1f29", "lineFirm": "#2d3240", "surface": "#0d1017", "surfaceEdge": "#1b1f29", "code": "#bfbdb6", "quote": "#e6b450",
+      "tokens": ["#ff8f40", "#aad94c", "#5a6673", "#d2a6ff", "#ffb454", "#59c2ff", "#f29668"],
+      "mark": ["rgba(230, 180, 80, 0.25)", "#e6e4dc"]
+    },
+    {
+      "id": "monokai", "name": "Monokai", "description": "the classic Sublime Text palette", "dark": true,
+      "page": "#272822", "ink": "#f8f8f2", "inkStrong": "#f8f8f2", "inkSoft": "#a59f85", "link": "#66d9ef",
+      "line": "#3e3d32", "lineFirm": "#49483e", "surface": "#1e1f1c", "surfaceEdge": "#3e3d32", "code": "#f8f8f2", "quote": "#75715e",
+      "tokens": ["#f92672", "#e6db74", "#75715e", "#ae81ff", "#a6e22e", "#66d9ef", "#f92672"],
+      "mark": ["rgba(230, 219, 116, 0.28)", "#f8f8f2"]
+    },
+    {
+      "id": "everforest-light", "name": "Everforest Light", "description": "green-based, warm and soft, light", "dark": false,
+      "page": "#fdf6e3", "ink": "#5c6a72", "inkStrong": "#4a555b", "inkSoft": "#829181", "link": "#3a94c5",
+      "line": "#e6e2cc", "lineFirm": "#d8d3ba", "surface": "#f4f0d9", "surfaceEdge": "#e6e2cc", "code": "#5c6a72", "quote": "#8da101",
+      "tokens": ["#f85552", "#8da101", "#939f91", "#df69ba", "#3a94c5", "#35a77c", "#f57d26"]
+    },
+    {
+      "id": "everforest-dark", "name": "Everforest Dark", "description": "green-based, warm and soft, dark", "dark": true,
+      "page": "#2d353b", "ink": "#d3c6aa", "inkStrong": "#e3d7bd", "inkSoft": "#9da9a0", "link": "#7fbbb3",
+      "line": "#3d484d", "lineFirm": "#475258", "surface": "#343f44", "surfaceEdge": "#3d484d", "code": "#d3c6aa", "quote": "#a7c080",
+      "tokens": ["#e67e80", "#a7c080", "#859289", "#d699b6", "#7fbbb3", "#83c092", "#e69875"],
+      "mark": ["rgba(219, 188, 127, 0.3)", "#e3d7bd"]
+    },
+    {
+      "id": "kanagawa", "name": "Kanagawa", "description": "inspired by The Great Wave off Kanagawa", "dark": true,
+      "page": "#1f1f28", "ink": "#dcd7ba", "inkStrong": "#dcd7ba", "inkSoft": "#c8c093", "link": "#7e9cd8",
+      "line": "#2a2a37", "lineFirm": "#54546d", "surface": "#16161d", "surfaceEdge": "#2a2a37", "code": "#dcd7ba", "quote": "#957fb8",
+      "tokens": ["#957fb8", "#98bb6c", "#727169", "#d27e99", "#7e9cd8", "#7aa89f", "#ffa066"],
+      "mark": ["rgba(230, 195, 132, 0.28)", "#dcd7ba"]
+    },
+    {
+      "id": "material-palenight", "name": "Material Palenight", "description": "Material Theme, Palenight", "dark": true,
+      "page": "#292d3e", "ink": "#a6accd", "inkStrong": "#eeffff", "inkSoft": "#8a90b0", "link": "#82aaff",
+      "line": "#343a52", "lineFirm": "#444b6a", "surface": "#232635", "surfaceEdge": "#343a52", "code": "#a6accd", "quote": "#c792ea",
+      "tokens": ["#c792ea", "#c3e88d", "#676e95", "#f78c6c", "#82aaff", "#ffcb6b", "#89ddff"],
+      "mark": ["rgba(255, 203, 107, 0.28)", "#eeffff"]
+    },
+    {
+      "id": "newsprint", "name": "Newsprint", "description": "a serif page of newsprint, after Typora's classic", "dark": false,
+      "page": "#f3f2ee", "ink": "#1f0909", "inkStrong": "#1f0909", "inkSoft": "#5c4f4f", "link": "#065588",
+      "line": "#d8d4cb", "lineFirm": "#b7b2a7", "surface": "#e8e6df", "surfaceEdge": "#d8d4cb", "code": "#1f0909", "quote": "#b7b2a7",
+      "tokens": ["#770088", "#aa1111", "#aa5500", "#116644", "#0000cc", "#008855", "#770088"],
+      "fonts": {"body": "\"PT Serif\", Georgia, Cambria, \"Times New Roman\", serif", "heading": "\"PT Serif\", Georgia, Cambria, \"Times New Roman\", serif", "code": "Consolas, \"Courier New\", monospace"}
+    },
+    {
+      "id": "academic", "name": "Academic", "description": "a white page set in a book serif", "dark": false,
+      "page": "#ffffff", "ink": "#2b2b2b", "inkStrong": "#111111", "inkSoft": "#5f5f5f", "link": "#1a4d8f",
+      "line": "#e2e2e2", "lineFirm": "#9a9a9a", "surface": "#f5f5f3", "surfaceEdge": "#e2e2e2", "code": "#2b2b2b", "quote": "#9a9a9a",
+      "tokens": ["#7a3e9d", "#2f6f3e", "#8a8a8a", "#a0522d", "#1a4d8f", "#8b6b00", "#9c2c2c"],
+      "fonts": {"body": "\"Palatino Linotype\", \"Book Antiqua\", Palatino, Georgia, serif", "heading": "\"Palatino Linotype\", \"Book Antiqua\", Palatino, Georgia, serif", "code": "Consolas, \"Courier New\", monospace"}
+    },
+    {
+      "id": "night", "name": "Night", "description": "a calm slate night, after Typora's classic", "dark": true,
+      "page": "#363b40", "ink": "#b8bfc6", "inkStrong": "#ffffff", "inkSoft": "#9aa3ab", "link": "#e0e0e0",
+      "line": "#474d54", "lineFirm": "#5a6168", "surface": "#2b2f33", "surfaceEdge": "#474d54", "code": "#e0e0e0", "quote": "#6b737b",
+      "tokens": ["#c792ea", "#a5d6a7", "#7f8a93", "#f78c6c", "#82aaff", "#ffcb6b", "#ff8a80"],
+      "mark": ["rgba(255, 203, 107, 0.3)", "#ffffff"]
+    }
+  ]
+}
