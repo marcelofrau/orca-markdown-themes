@@ -1,8 +1,8 @@
 {
   "manifestVersion": 2,
-  "id": "orca-markdown-themes",
+  "id": "markdown-themes",
   "name": "Markdown Themes",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Read-only Markdown preview in Tinta's ten themes, with 250+ code block themes (Ayu, GitHub, Monokai, all of base16) and Mermaid diagrams in their own theme, zoomable and expandable.",
   "engines": {
     "orca": ">=1.4.248"

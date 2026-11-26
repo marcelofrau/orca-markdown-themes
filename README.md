@@ -50,7 +50,9 @@ approve it first. The command prints what the plugin gets and the exact command 
 orca plugin install marcelofrau/orca-markdown-themes --approve <fingerprint>
 ```
 
-Update with `orca plugin update`, remove with `orca plugin uninstall`.
+Orca lists it as `marcelofrau.markdown-themes`. Update with
+`orca plugin update marcelofrau.markdown-themes`, remove with
+`orca plugin uninstall marcelofrau.markdown-themes`.
 
 ## Use
 
