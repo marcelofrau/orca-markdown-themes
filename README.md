@@ -33,8 +33,10 @@ Read in a warm sepia page while Orca stays dark, or the other way round.
   and C4 diagrams stay readable on dark pages.
 - **Zoom, pan and expand diagrams**: drag to pan, Ctrl+wheel or the buttons to zoom,
   double-click or ⛶ to open a diagram full-window.
-- **Switch themes from the viewer**: a quiet gear in the top-right corner, kept in sync with
-  Orca's Settings.
+- **Three widths**: Comfortable (a centred reading column), Wide or Full, like the width switch
+  of AI chat apps.
+- **Switch themes and width from the viewer**: a quiet gear in the top-right corner, kept in
+  sync with Orca's Settings.
 - Live updates while the file changes, front matter hidden, heading anchors, syntax highlighting
   for 40+ languages.
 
@@ -77,6 +79,7 @@ Orca lists it as `marcelofrau.markdown-themes`. Update with
 | Setting | Values | Default |
 | --- | --- | --- |
 | Page theme | the 42 page themes | Paper |
+| Width | Comfortable (a centred reading column), Wide, Full (edge to edge) | Wide |
 | Code blocks | Ayu Dark, Same as the page theme, 30 popular themes | Ayu Dark |
 | Code blocks: any other theme | any highlight.js or base16 id, such as `kimbie-dark` or `base16/ocean` (overrides Code blocks) | empty |
 | Diagrams | Mermaid Default, Neutral, Forest, Dark, Same as the page theme | Mermaid Default |

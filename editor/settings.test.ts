@@ -5,12 +5,18 @@ const ids = new Set(['github-dark', 'base16/ocean'])
 const pages = new Set(['paper', 'nord'])
 
 test('falls back to the defaults for missing or stale values', () => {
-  assert.deepEqual(resolveSettings({}, ids, pages), { theme: 'paper', codeTheme: 'ayu-dark', diagramTheme: 'default' })
-  assert.deepEqual(resolveSettings({ theme: 'gone', codeTheme: 'gone', diagramTheme: 'gone' }, ids, pages), {
+  assert.deepEqual(resolveSettings({}, ids, pages), { theme: 'paper', codeTheme: 'ayu-dark', diagramTheme: 'default', width: 'wide' })
+  assert.deepEqual(resolveSettings({ theme: 'gone', codeTheme: 'gone', diagramTheme: 'gone', width: 'gone' }, ids, pages), {
     theme: 'paper',
     codeTheme: 'ayu-dark',
-    diagramTheme: 'default'
+    diagramTheme: 'default',
+    width: 'wide'
   })
+})
+
+test('keeps a known width', () => {
+  assert.equal(resolveSettings({ width: 'full' }, ids, pages).width, 'full')
+  assert.equal(resolveSettings({ width: 'huge' }, ids, pages).width, 'wide')
 })
 
 test('keeps a known page theme', () => {

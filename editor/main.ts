@@ -49,6 +49,7 @@ async function applySettings() {
   code.textContent = settings.codeTheme === 'page' ? '' : hljsLayoutCss + (hljsTheme ? hljsTheme.css : ayuCss)
   document.documentElement.classList.toggle('theme-dark', theme.dark)
   document.documentElement.style.setProperty('--sheet', SHEETS[settings.diagramTheme])
+  for (const w of ['comfortable', 'wide', 'full']) document.documentElement.classList.toggle(`width-${w}`, settings.width === w)
 }
 
 /** Mermaid's config for the chosen diagram theme; 'page' derives one from the page theme's colours. */
@@ -133,6 +134,17 @@ const menu = mountMenu([
     ],
     value: () => settings.diagramTheme,
     onChange: (value) => save([['diagramTheme', value]])
+  },
+  {
+    key: 'width',
+    label: 'Width',
+    options: [
+      { value: 'comfortable', label: 'Comfortable (reading column)' },
+      { value: 'wide', label: 'Wide' },
+      { value: 'full', label: 'Full' }
+    ],
+    value: () => settings.width,
+    onChange: (value) => save([['width', value]])
   }
 ])
 

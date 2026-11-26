@@ -1,4 +1,5 @@
 export const DIAGRAM_THEMES = ['default', 'neutral', 'forest', 'dark', 'page'] as const
+export const WIDTHS = ['comfortable', 'wide', 'full'] as const
 /** Code themes of the plugin itself, besides the highlight.js ones. */
 export const OWN_CODE_THEMES = ['ayu-dark', 'page'] as const
 
@@ -7,6 +8,7 @@ export interface Settings {
   /** 'ayu-dark', 'page' or a highlight.js theme id such as 'github-dark' or 'base16/ocean'. */
   codeTheme: string
   diagramTheme: (typeof DIAGRAM_THEMES)[number]
+  width: (typeof WIDTHS)[number]
 }
 
 const pick = <T extends string>(value: unknown, allowed: readonly T[], fallback: T): T =>
@@ -19,7 +21,8 @@ export function resolveSettings(raw: Record<string, unknown>, codeThemeIds: Read
   return {
     theme: typeof raw.theme === 'string' && pageThemeIds.has(raw.theme) ? raw.theme : 'paper',
     codeTheme: known(custom) ? custom : known(raw.codeTheme) ? (raw.codeTheme as string) : 'ayu-dark',
-    diagramTheme: pick(raw.diagramTheme, DIAGRAM_THEMES, 'default')
+    diagramTheme: pick(raw.diagramTheme, DIAGRAM_THEMES, 'default'),
+    width: pick(raw.width, WIDTHS, 'wide')
   }
 }
 

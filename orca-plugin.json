@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "markdown-themes",
   "name": "Markdown Themes",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Read-only Markdown preview in 42 page themes (Tinta's ten plus classics like GitHub, Solarized, Nord, Catppuccin), 260 code block themes and Mermaid diagrams in their own theme, zoomable and expandable.",
   "engines": {
     "orca": ">=1.4.248"
@@ -122,6 +122,23 @@
           "Solarized Dark (Classic, dark)",
           "Tokyo Night (Classic, dark)",
           "Tokyo Night Storm (Classic, dark)"
+        ]
+      },
+      {
+        "key": "width",
+        "title": "Width",
+        "description": "How wide the page is: a centred reading column, wide margins a third of that, or edge to edge.",
+        "type": "string",
+        "default": "wide",
+        "enum": [
+          "comfortable",
+          "wide",
+          "full"
+        ],
+        "enumLabels": [
+          "Comfortable (reading column)",
+          "Wide",
+          "Full"
         ]
       },
       {

@@ -4,8 +4,11 @@
 export const baseCss = `
 html, body { margin: 0; background-color: var(--page); }
 body { font-size: 16px; line-height: 1.65; }
-/* Side margins a third of what a centred 46em column with 40px padding left: wide tables use the room */
-main { padding: 32px calc(max(0px, 100vw - 46em - 80px) / 6 + 14px) 80px; }
+/* Width (Settings > Width, or the gear): a centred reading column, a third of its side margins, or edge to edge */
+main { box-sizing: border-box; padding: 32px 40px 80px; }
+:root.width-comfortable main { max-width: calc(46em + 80px); margin: 0 auto; }
+:root.width-wide main { padding-inline: calc(max(0px, 100vw - 46em - 80px) / 6 + 14px); }
+:root.width-full main { padding-inline: 24px; }
 ::selection { background: color-mix(in srgb, var(--link) 22%, transparent); }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.5em 0 0.6em; }
