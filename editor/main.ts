@@ -11,6 +11,7 @@ import { pageThemes } from './page-themes'
 import { codeThemes } from './code-themes'
 import { codeThemeWrites, resolveSettings, type Settings } from './settings'
 import { mountMenu } from './menu'
+import { showLinkMenu } from './link-menu'
 import { fit, zoomable } from './zoom'
 
 // Read-only Markdown preview in one of Tinta's themes, whatever theme Orca uses, with its own
@@ -276,14 +277,15 @@ document.addEventListener('visibilitychange', () => {
   }
 })
 
-// External links open in the browser; in-page anchors scroll; other links have nowhere to go.
+// Web links show a small menu (Open in browser, Copy link); in-page anchors scroll; other links
+// (relative files) have nowhere to go from a frame.
 document.addEventListener('click', (event) => {
   const link = (event.target as Element | null)?.closest?.('a')
-  if (!link) return
+  if (!link || link.closest('.link-menu')) return
   const href = link.getAttribute('href') ?? ''
   event.preventDefault()
   if (/^(https?:|mailto:)/i.test(href)) {
-    void orca.host.call('shell.openExternal', { url: href }).catch(() => {})
+    showLinkMenu(link, href, (url) => orca.host.call('shell.openExternal', { url }))
   } else if (href.startsWith('#')) {
     document.getElementById(decodeURIComponent(href.slice(1)))?.scrollIntoView()
   }

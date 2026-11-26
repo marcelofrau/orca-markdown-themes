@@ -33,6 +33,8 @@ Read in a warm sepia page while Orca stays dark, or the other way round.
   and C4 diagrams stay readable on dark pages.
 - **Zoom, pan and expand diagrams**: drag to pan, Ctrl+wheel or the buttons to zoom,
   double-click or ⛶ to open a diagram full-window.
+- **Link menu**: clicking a web link shows *Open in browser* and *Copy link*, like Orca's
+  terminal link menu, instead of opening straight away.
 - **Three widths**: Comfortable (a centred reading column), Wide or Full, like the width switch
   of AI chat apps.
 - **Switch themes and width from the viewer**: a quiet gear in the top-right corner, kept in
@@ -139,8 +141,11 @@ gear menu, which fills in the free-text setting for you.
 ## Limits
 
 - Read-only: switch back to **Source** to edit.
-- Links to other files do nothing, because an editor frame never learns file paths. `http(s)`
-  links open in your browser after Orca asks, and `#anchor` links scroll.
+- Links to other files do nothing, because an editor frame never learns file paths. Web links
+  open in your system browser (Orca asks first) or are copied; a plugin frame cannot reach Orca's
+  own browser. `#anchor` links scroll.
+- Orca always opens `.md` in its own viewer first and lets no plugin become the default for it, so
+  switch the view toggle once per file.
 - Desktop app only (the editor runs in Orca's isolated frame).
 
 ## Develop

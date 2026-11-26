@@ -53,6 +53,24 @@ img { max-width: 100%; }
 .mmd-sheet { position: relative; flex: 1; background: var(--sheet, #ffffff); border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35); overflow: hidden; display: flex; }
 .mmd-sheet .mmd-view { flex: 1; }
 .mmd-sheet .mmd-content { display: inline-block; text-align: left; }
+/* The menu at a clicked link */
+.link-menu {
+  position: fixed; z-index: 60; min-width: 220px; max-width: min(420px, calc(100vw - 16px)); padding: 6px;
+  display: grid; gap: 2px; font: 13px "Segoe UI", sans-serif;
+  color: var(--ink); background: var(--page); border: 1px solid var(--line-firm); border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+.link-menu-url {
+  padding: 4px 8px 6px; color: var(--ink-soft); font-size: 12px; user-select: text;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-bottom: 1px solid var(--line); margin-bottom: 2px;
+}
+.link-menu button {
+  font: inherit; text-align: left; padding: 6px 8px; border: 0; border-radius: 5px; cursor: pointer;
+  color: var(--ink); background: transparent;
+}
+.link-menu button:hover, .link-menu button:focus-visible { background: var(--surface); outline: none; }
+.link-menu-status { padding: 0 8px; color: var(--ink-soft); font-size: 12px; }
+.link-menu-status:empty { display: none; }
 /* The gear and its theme pickers */
 .mt-gear {
   position: fixed; top: 10px; right: 12px; z-index: 50; width: 30px; height: 30px; padding: 0;

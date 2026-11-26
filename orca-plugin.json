@@ -2,7 +2,7 @@
   "manifestVersion": 2,
   "id": "markdown-themes",
   "name": "Markdown Themes",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Read-only Markdown preview in 42 page themes (Tinta's ten plus classics like GitHub, Solarized, Nord, Catppuccin), 260 code block themes and Mermaid diagrams in their own theme, zoomable and expandable.",
   "engines": {
     "orca": ">=1.4.248"
